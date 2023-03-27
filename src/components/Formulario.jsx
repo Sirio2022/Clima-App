@@ -17,11 +17,12 @@ export default function Formulario() {
     }
 
     consultarClima(busqueda);
+    setAlerta('');
   };
 
   return (
     <div className="contenedor">
-      {alerta && <p>{alerta}</p>}
+      {alerta && <p className='alerta'>{alerta}</p>}
       <form onSubmit={handleSubmit}>
         <div className="campo">
           <label htmlFor="ciudad">Ciudad: </label>
